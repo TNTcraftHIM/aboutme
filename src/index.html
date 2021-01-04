@@ -14,11 +14,14 @@
     <div id="container">
         <div class="section header grid-container grid-parent">
             <div class="split picture-container grid-40">
-                <a href="${require('./assets/images/TNTcraftHIM.png')}">
+                <a>
                     <picture class="picture">
+						<div class="imgbox">
+						<div class="imshar"></div>
                         <source type="image/webp" srcset="${require('./assets/images/TNTcraftHIM.webp')}" />
                         <img src="${require('./assets/images/TNTcraftHIM.jpg')}" alt="picture of TNTcraftHIM" />
                     </picture>
+					</div>
                 </a>
             </div>
 
@@ -285,5 +288,25 @@
         </div>
     </div>
 </body>
-
+<style>
+ .imgbox{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 0px;
+}
+ .imgbox .imshar{
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+}
+.imgbox img{
+    display: block;
+    width: 100%;
+}
+</style>
 </html>
